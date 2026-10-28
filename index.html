@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Python Mini Apps — small interactive projects for learning programming logic." />
+  <title>Python Mini Apps | Kashyap's Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">&gt;_</span> PYTHON LAB</a>
+    <nav><a href="#apps">Mini apps</a><a href="#examples">Code examples</a><a href="#about">About</a></nav>
+    <a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> PROGRAMMING / PRACTICE PROJECT</div>
+      <h1>Small apps.<br><span>Big logic.</span></h1>
+      <p>A collection of mini tools and games inspired by Python practice — built to explore logic, functions, and problem solving.</p>
+      <a class="primary-btn" href="#apps">Explore the apps <span>↓</span></a>
+      <div class="hero-stats">
+        <div><strong>05</strong><span>Mini apps</span></div>
+        <div><strong>06+</strong><span>Code examples</span></div>
+        <div><strong>100%</strong><span>Responsive</span></div>
+      </div>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    </section>
+
+    <section class="section" id="apps">
+      <div class="section-heading"><div><div class="eyebrow">01 / INTERACTIVE TOOLS</div><h2>Explore the mini apps</h2></div><p>Try them right here in your browser.</p></div>
+      <div class="app-grid">
+        <article class="app-card">
+          <div class="card-icon">＋ ÷</div><div class="card-meta"><span>UTILITY</span><span>01</span></div>
+          <h3>Quick Calculator</h3><p>Perform basic arithmetic with a clean, simple calculator.</p>
+          <div class="calculator">
+            <input id="numA" type="number" placeholder="First number" aria-label="First number">
+            <select id="operator" aria-label="Operation"><option value="+">Addition (+)</option><option value="-">Subtraction (−)</option><option value="*">Multiplication (×)</option><option value="/">Division (÷)</option></select>
+            <input id="numB" type="number" placeholder="Second number" aria-label="Second number">
+            <button class="small-btn" id="calculate">Calculate ↗</button><div class="result" id="calcResult">Your result appears here.</div>
+          </div>
+        </article>
+        <article class="app-card">
+          <div class="card-icon">01<span class="muted">?</span></div><div class="card-meta"><span>MINI GAME</span><span>02</span></div>
+          <h3>Number Guess</h3><p>Can you guess the secret number between 1 and 20?</p>
+          <div class="game-panel"><div class="secret-number" id="secretNumber">?</div><input id="guessInput" type="number" min="1" max="20" placeholder="Enter 1–20" aria-label="Your guess"><button class="small-btn" id="guessBtn">Check guess ↗</button><p class="result" id="guessResult" aria-live="polite">Make your first guess!</p><button class="text-btn" id="newGame">↻ New game</button></div>
+        </article>
+        <article class="app-card">
+          <div class="card-icon">✳</div><div class="card-meta"><span>GENERATOR</span><span>03</span></div>
+          <h3>Password Generator</h3><p>Create a random password for demo and learning purposes.</p>
+          <div class="password-panel"><label for="passLength">Password length <strong id="lengthLabel">14</strong></label><input id="passLength" type="range" min="8" max="28" value="14"><div class="check-row"><label><input id="includeNumbers" type="checkbox" checked> Numbers</label><label><input id="includeSymbols" type="checkbox" checked> Symbols</label></div><div class="password-output" id="passwordOutput">Click generate</div><button class="small-btn" id="generatePass">Generate password ↗</button><button class="text-btn" id="copyPass">Copy password</button></div>
+        </article>
+        <article class="app-card">
+          <div class="card-icon">°C</div><div class="card-meta"><span>CONVERTER</span><span>04</span></div>
+          <h3>Temperature Converter</h3><p>Convert Celsius and Fahrenheit instantly.</p>
+          <div class="converter"><input id="tempInput" type="number" value="25" aria-label="Temperature value"><select id="tempMode" aria-label="Conversion direction"><option value="c-f">Celsius → Fahrenheit</option><option value="f-c">Fahrenheit → Celsius</option></select><button class="small-btn" id="convertTemp">Convert ↗</button><div class="temp-result" id="tempResult">25°C = 77°F</div></div>
+        </article>
+        <article class="app-card wide-card">
+          <div class="card-icon">✓</div><div class="card-meta"><span>PRODUCTIVITY</span><span>05</span></div>
+          <h3>Focus To-Do</h3><p>Add tasks, mark them complete, and keep track of your practice goals. Tasks stay only while this page is open.</p>
+          <form id="todoForm" class="todo-form"><input id="todoInput" placeholder="Add a practice task..." maxlength="100" aria-label="New task"><button class="small-btn" type="submit">Add task +</button></form>
+          <div id="todoList" class="todo-list"><p class="empty-state">No tasks yet — add your first one.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section code-section" id="examples">
+      <div class="section-heading"><div><div class="eyebrow">02 / LEARN BY EXAMPLE</div><h2>Python code snippets</h2></div><p>Beginner-friendly examples to practise in IDLE or VS Code.</p></div>
+      <div class="code-tabs" role="tablist"><button class="tab active" data-code="hello">Hello World</button><button class="tab" data-code="even">Even or Odd</button><button class="tab" data-code="factorial">Factorial</button></div>
+      <div class="code-window"><div class="window-bar"><div class="dots"><i></i><i></i><i></i></div><span id="fileName">hello_world.py</span><button id="copyCode" class="copy-btn">Copy code</button></div><pre><code id="codeDisplay">print("Hello, World!")</code></pre></div>
+      <p class="code-note">These are code examples for learning. This website runs the interactive tools in JavaScript; it does not execute Python code in your browser.</p>
+    </section>
+
+    <section class="about-section" id="about"><div><div class="eyebrow">03 / ABOUT THIS PROJECT</div><h2>Built for curious minds.</h2><p>Python Mini Apps is a practice project showcasing programming fundamentals, useful little tools, and a responsive interface. A portfolio project by <strong>Kashyap Patel</strong>.</p></div><div class="about-badge"><span>&gt;_</span><small>KEEP<br>BUILDING</small></div></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">&gt;_</span> PYTHON LAB</a><span>Made for learning · HTML / CSS / JavaScript</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
